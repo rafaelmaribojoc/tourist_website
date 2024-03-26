@@ -1,0 +1,360 @@
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Flat Icon CDN */
+@import url('https://cdn-uicons.flaticon.com/2.2.0/uicons-brands/css/uicons-brands.css');
+
+:root {
+  --primary-clr: rgb(251, 251, 254);
+  --secondary-clr: rgb(5, 3, 21);
+  --accent-clr: rgb(9, 153, 120);
+
+  --white-clr-100: rgb(255, 255, 255);
+  --white-clr-200: rgb(245, 245, 245);
+  --white-clr-300: rgb(230, 230, 230);
+  --white-clr-400: rgb(200, 200, 200);
+  --white-clr-500: rgb(150, 150, 150);
+  --white-clr-600: rgb(100, 100, 100);
+  --white-clr-700: rgb(70, 70, 70);
+  --white-clr-800: rgb(40, 40, 40);
+  --white-clr-900: rgb(20, 20, 20);
+
+  --black-clr-100: rgb(230, 230, 230);
+  --black-clr-200: rgb(200, 200, 200);
+  --black-clr-300: rgb(150, 150, 150);
+  --black-clr-400: rgb(100, 100, 100);
+  --black-clr-500: rgb(50, 50, 50);
+  --black-clr-600: rgb(30, 30, 30);
+  --black-clr-700: rgb(20, 20, 20);
+  --black-clr-800: rgb(10, 10, 10);
+  --black-clr-900: rgb(0, 0, 0);
+
+  --green-clr-100: rgb(224, 255, 224);
+  --green-clr-200: rgb(178, 255, 178);
+  --green-clr-300: rgb(0, 255, 0);
+  --green-clr-400: rgb(0, 204, 0);
+  --green-clr-500: rgb(0, 153, 0);
+  --green-clr-600: rgb(0, 102, 0);
+  --green-clr-700: rgb(0, 51, 0);
+  --green-clr-800: rgb(0, 25, 0);
+  --green-clr-900: rgb(0, 10, 0);
+}
+
+/* Global CSS & Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: var(--secondary-clr);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background: var(--accent-clr);
+  color: var(--white-clr-100);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--black-clr-500);
+  font-size: 18px;
+}
+
+.container {
+  padding: 6px 150px;
+}
+
+/* Header Section CSS */
+
+header {
+  align-items: center;
+  background-color: var(--primary-clr);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+  justify-content: space-between;
+  min-width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.header__logo-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.header__logo-img {
+  max-width: 80px;
+  min-width: 80px;
+}
+
+.header__logo-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navigation__list-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 0 30px;
+  justify-content: center;
+}
+
+.navigation__list a {
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+  padding: 4px 10px;
+  transition: all 0.3s linear;
+}
+
+.navigation__list a:hover {
+  background-color: var(--accent-clr);
+  color: var(--white-clr-200);
+}
+
+/* Main Section CSS */
+
+.hero {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+
+.hero__headline-wrapper {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.hero__heading {
+  font-size: 45px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.hero__paragraph {
+  border-right: 5px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(60, end) infinite, restart-typing 8s infinite,
+    cursor 0.6s infinite;
+  animation-delay: 12s;
+}
+
+.hero__button {
+  align-self: center;
+  background-color: rgb(9, 153, 120);
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  color: var(--white-clr-200);
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  padding-block: 5px;
+  padding-inline: 10px;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.hero__button:hover {
+  box-shadow: 0 0 20px rgba(9, 153, 120, 0.7);
+}
+
+
+.hero__img {
+  border-radius: 6px;
+  max-width: 550px;
+  min-width: 300px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 50px 0;
+  justify-content: space-around;
+  margin-block: 50px;
+}
+
+.section__heading {
+  font-size: 35px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-decoration: underline 5px var(--accent-clr);
+}
+ 
+.section__card-wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+  min-height: 480px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.card:hover {
+  scale: 1.01;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px 0;
+  justify-content: space-between;
+}
+
+.card__img {
+  aspect-ratio: 4 / 3;
+  max-width: 350px;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.card__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+  padding: 0 15px;
+}
+
+.card__heading {
+  font-size: 20px;
+}
+
+.card__description {
+  font-size: 16px;
+}
+
+.card__button {
+  color: var(--accent-clr);
+  font-weight: bold;
+}
+
+.card__button:hover {
+  text-decoration: underline 3px var(--accent-clr);
+}
+
+#about-section {
+  align-items: center;
+  background-color: var(--secondary-clr);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 50px 90px 90px;
+}
+
+.about__heading {
+  color: var(--primary-clr);
+  font-size: clamp(15px, 5vw, 42px);
+  letter-spacing: 1px;
+  text-decoration: underline 7px var(--accent-clr);
+  text-transform: uppercase;
+}
+
+.about__description {
+  color: var(--primary-clr);
+  font-size: 19px;
+}
+
+.about__highlight {
+  color: var(--accent-clr);
+}
+
+.contact {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.icon__wrapper {
+  align-items: center;
+  display: flex;
+  gap: 0 80px;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.contact__heading {
+  font-size: clamp(15px, 5vw, 42px);
+  letter-spacing: 1px;
+  text-decoration: underline 10px var(--accent-clr);
+  text-transform: uppercase;
+}
+
+.contact__copyright {
+  color: var(--secondary-clr);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Animation CSS */
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 527.141px;
+  }
+}
+
+@keyframes restart-typing {
+  0%,
+  100% {
+    width: 0;
+  }
+
+  50% {
+    width: 527.141px;
+  }
+}
